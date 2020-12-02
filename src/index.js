@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ContextStore } from './store/index';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ContextStore.Provider value={{loadingStatus: false}}>
+      <App />
+    </ContextStore.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
