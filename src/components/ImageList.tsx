@@ -20,7 +20,7 @@ export default (props: ImageListProps) => {
     <div className={styles.container}>
       {
         props.data && props.data.photo.map((i:any) => {
-          return (<div>
+          return (<div key={i.id}>
             <img src={`http://farm${i.farm}.static.flickr.com/${i.server}/${i.id}_${i.secret}.jpg`} alt={i.id} title={i.title} />
           </div>)
         })

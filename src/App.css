@@ -38,9 +38,10 @@
 }
 
 .App > main {
-  padding-top: 30%;
   padding-left: 16px;
   padding-right: 16px;
+
+  transition: padding-top 1s;
 }
 
 .imageResultWrapper {
@@ -52,4 +53,30 @@
   font-weight: 600;
   text-align: left;
   text-indent: 1em;
+}
+
+.imageResultMore {
+  height: 48px;
+  line-height: 48px;
+  padding-bottom: 16px;
+}
+
+.imageResultMore > button {
+  outline: none;
+  min-width: 97px;
+  height: 48px;
+  border: 2px solid #4962FF;
+  background-color: #4962FF;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+}
+
+main.showResultTop {
+  padding-top: 16px;
+}
+
+main.noneResultTop {
+  padding-top: 30%;
 }
