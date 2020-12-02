@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.App > main {
+  padding-top: 30%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.imageResultWrapper {
+  margin-top: 48px;
+}
+
+.imageResultWrapper header {
+  font-size: large;
+  font-weight: 600;
+  text-align: left;
+  text-indent: 1em;
+}

@@ -1,23 +1,30 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
+import Search from './components/Search';
+import {
+  searchImageByString
+} from './services/api';
 import './App.css';
+import ImageList from './components/ImageList';
 
-function App() {
+const App = () => {
+  const [imageData, setImageData] = useState(null);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <h1>Flickr image search</h1>
+        <Search
+          onSearch={async (keyStr) => {
+            console.log(keyStr);
+            const data = await searchImageByString(keyStr)
+            setImageData(data.data.photos);
+          }}
+        />
+        <section className="imageResultWrapper">
+          <header>Result{imageData ? `(${imageData.total})` : ''}:</header>
+          <ImageList data={imageData} />
+        </section>
+      </main>
     </div>
   );
 }

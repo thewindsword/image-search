@@ -1,0 +1,23 @@
+.container {
+}
+
+.container > input {
+  height: 48px;
+  border: 2px solid blue;
+  outline: none;
+}
+.container > input:focus {
+  
+}
+
+.container > button {
+  height: 48px;
+  color: white;
+  background-color: blue;
+  border: 2px solid transparent;
+  outline: none;
+}
+.container > button:hover {
+  background-color: 4962FF;
+  cursor: pointer;
+}
